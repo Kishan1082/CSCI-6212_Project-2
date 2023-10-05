@@ -1,12 +1,12 @@
 import random
 
-def ran_gen(n):
+def ran_gen(n): #Generates n random points
     if n >0:
         return[(random.randint(1,100), random.randint(1,100)) for i in range(n)]
     else:
         return None
 
-def stair_recurrence(points):
+def stair_recurrence(points): #Recurrence function to divide and conquer
 
     if(len(points)==1):
         return points
@@ -20,7 +20,7 @@ def stair_recurrence(points):
 
     return stair_merge(left_half, right_half)
 
-def stair_merge(staircase1, staircase2):
+def stair_merge(staircase1, staircase2): #function to merge
     merged_staircase = []
     i,j = 0,0
 
